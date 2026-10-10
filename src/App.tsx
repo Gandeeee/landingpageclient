@@ -16,11 +16,11 @@ export const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#062833] via-[#083a47] to-[#042029] text-white selection:bg-cyan-300 selection:text-slate-900 relative overflow-x-hidden">
+    <div className="min-h-screen bg-[#FAF8F5] text-[#0F2E35] selection:bg-cyan-200 selection:text-slate-900 relative overflow-x-hidden">
       
       {/* Background Decorative Tropical Mesh Glows */}
-      <div className="fixed top-0 right-0 w-[700px] h-[700px] bg-cyan-400/10 rounded-full blur-[180px] pointer-events-none" />
-      <div className="fixed bottom-0 left-0 w-[600px] h-[600px] bg-emerald-400/10 rounded-full blur-[160px] pointer-events-none" />
+      <div className="fixed top-1/4 right-0 w-[700px] h-[700px] bg-cyan-200/20 rounded-full blur-[180px] pointer-events-none" />
+      <div className="fixed bottom-1/4 left-0 w-[600px] h-[600px] bg-amber-100/35 rounded-full blur-[160px] pointer-events-none" />
 
       {/* Floating Navbar matching Voyare reference */}
       <Navbar />
