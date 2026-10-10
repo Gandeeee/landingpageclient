@@ -20,15 +20,36 @@ export const Hero: React.FC<HeroProps> = ({ onScrollToLinks }) => {
       
       {/* Background Image: Vivid, High-Definition, Crystal Clear Nusa Penida Aerial View */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat pointer-events-none"
         style={{
           backgroundImage: `url('/assets/background.jpg')`,
+          WebkitMaskImage: 'linear-gradient(to bottom, black 0%, black 50%, rgba(0,0,0,0.85) 65%, rgba(0,0,0,0.5) 75%, rgba(0,0,0,0.15) 85%, transparent 92%, transparent 100%)',
+          maskImage: 'linear-gradient(to bottom, black 0%, black 50%, rgba(0,0,0,0.85) 65%, rgba(0,0,0,0.5) 75%, rgba(0,0,0,0.15) 85%, transparent 92%, transparent 100%)',
         }}
       />
 
-      {/* Sunlit Natural Vignette - Ultra-bright & vivid ocean, transitioning into warm sand */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-[#FAF8F5]" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-transparent pointer-events-none" />
+      {/* Top subtle vignette for navbar contrast */}
+      <div className="absolute top-0 inset-x-0 h-44 bg-gradient-to-b from-black/35 via-black/10 to-transparent pointer-events-none" />
+
+      {/* Left subtle vignette for text readability - constrained to upper 65% so it never tints the bottom transition */}
+      <div className="absolute top-0 left-0 w-full sm:w-2/3 h-[65%] bg-gradient-to-r from-black/25 via-transparent to-transparent pointer-events-none" />
+
+      {/* Seamless Organic Scrim Gradient to Tropical Sand (#FAF8F5) */}
+      <div 
+        className="absolute bottom-0 inset-x-0 h-[360px] sm:h-[460px] pointer-events-none z-[4]"
+        style={{
+          background: `linear-gradient(to bottom,
+            rgba(250, 248, 245, 0) 0%,
+            rgba(250, 248, 245, 0.05) 15%,
+            rgba(250, 248, 245, 0.18) 30%,
+            rgba(250, 248, 245, 0.42) 50%,
+            rgba(250, 248, 245, 0.72) 70%,
+            rgba(250, 248, 245, 0.94) 85%,
+            rgba(250, 248, 245, 1) 92%,
+            rgba(250, 248, 245, 1) 100%
+          )`,
+        }}
+      />
 
       {/* Spacer for Top Fixed Navbar */}
       <div className="pt-28 sm:pt-36" />
